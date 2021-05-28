@@ -1,0 +1,8 @@
+@import '../../assets/styles/variables';
+
+#header {
+  background-color: $primary-color;
+  height: 84px;
+  display: flex;
+  align-items: center;
+}
