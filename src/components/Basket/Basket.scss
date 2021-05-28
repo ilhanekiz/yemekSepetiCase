@@ -1,0 +1,45 @@
+@import "../../assets/styles/variables";
+
+#basket {
+  width: 239px;
+  
+  .head {    
+    .title {
+      display: block;
+      padding: 9px 10px;
+      background-color: $primary-color;
+      color: #fff;
+      font-size: $font-size-md;
+      font-weight: $font-weight-normal;
+    }
+
+    .sub-title {
+      display: block;
+      padding: 9px 10px;
+      color: #000;
+      background-color: $yellow;
+      font-size: $font-size-md;
+      font-weight: $font-weight-normal;
+    }
+  }
+
+  .content {
+    padding: 20px;
+    border-bottom: 1px solid $gray;
+    border-left: 1px solid $gray;
+    border-right: 1px solid $gray;
+    border-radius: 0 0 5px 5px;
+
+    .passive-mode {
+      display: flex;
+      align-items: center;
+
+      .text {
+        font-size: $font-size-md;
+        font-weight: $font-weight-bold;
+        color: #000;
+        padding-left: 10px;
+      }
+    }
+  }
+}
