@@ -13,6 +13,7 @@
 
   .inner {
     display: inline-flex;
+    align-items: center;
 
     .information {
       margin-left: 18px;
@@ -23,12 +24,17 @@
       }
 
       .content {
+        display: inline-flex;
         margin-top: 12px;
+
+        .delivery {
+          display: inline-flex;
+
+          .icon-box {
+            margin-left: 24px;
+          }
+        }
       }
     }
-  }
-
-  .footer {
-
   }
 }

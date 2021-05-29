@@ -1,5 +1,23 @@
 @import '../../assets/styles/variables';
 
 .icon-box {
+  > img {
 
+  }
+
+  >.title,
+  >.sub-title {
+    display: block;
+    color: #000;
+    font-size: $font-size-xs;
+    line-height: $font-line-height-xs !important;
+  }
+
+  >.title {
+    font-weight: $font-weight-normal;
+  }
+
+  >.sub-title {
+    font-weight: $font-weight-bold;
+  }
 }

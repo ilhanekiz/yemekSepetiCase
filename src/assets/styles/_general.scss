@@ -9,3 +9,14 @@ body {
   width: $container;
   margin: 0 auto;
 }
+
+.super-restaurant-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.5px solid $orange-light;
+  border-radius: 2px;
+  width: 38px;
+  height: 46px;
+  margin-right: 5px;
+}

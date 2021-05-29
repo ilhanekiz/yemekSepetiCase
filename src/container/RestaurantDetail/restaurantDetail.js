@@ -13,10 +13,10 @@ export const dummyRestaurantBannerData = {
     { title: 'Lezzet', point: '8,7' },
   ],
   delivery: [
-    { title: 'Hız', point: '8,7' },
-    { title: 'Servis', point: '8,7' },
-    { title: 'Lezzet', point: '8,7' },
+    { icon: 'src/assets/images/icons/min-price.png', title: 'Min. Tutar', subTitle: '50,00 TL' },
+    { icon: 'src/assets/images/icons/motor.png', title: 'Servis Süresi', subTitle: '20-30 dk' },
   ],
+  isSuperRestaurant: true,
 };
 
 const RestaurantDetail = () => (
