@@ -5,11 +5,11 @@
   background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
-  width: calc(100% - 248px);
+  width: 100%;
   min-height: 153px;
-  margin-left: 9px;
   padding: 12px;
   border-radius: 5px;
+  margin-bottom: 27px;
 
   .inner {
     display: inline-flex;

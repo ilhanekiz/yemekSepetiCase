@@ -1,0 +1,31 @@
+@import '../../assets/styles/variables';
+
+.count {
+  display: inline-flex;
+  
+  .form-control {
+    font-size: $font-size-base;
+    color: #000;
+    box-sizing: border-box;
+    text-align: center;
+    width: 27px;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid $gray;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.258823);
+    border-radius: 2px;
+    margin-right: 5px;
+  }
+
+  .btn-plus {
+    cursor: pointer;
+    color: #fff;
+    background-color: $green-dark;
+    width: 30px;
+    height: 20px;
+    border-radius: 2px;
+    border: none;
+    font-size: $font-line-height-md;
+    font-weight: $font-weight-medium;
+  }
+}

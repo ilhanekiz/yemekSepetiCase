@@ -1,0 +1,40 @@
+@import '../../assets/styles/variables';
+
+.menu {
+  display: flex;
+  padding: 10px 14px;
+  border-right: 1px solid $gray;
+  border-bottom: 1px solid $gray;
+  border-left: 1px solid $gray;
+
+  .count {
+    width: 100px;
+  }
+
+  .text-content {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+
+    > .title {
+      font-size: $font-size-base;
+      font-weight: $font-weight-bold;
+      color: $orange;
+      line-height: $font-line-height-base;
+    }
+
+    > .description {
+      font-size: $font-size-base;
+      font-weight: $font-weight-normal;
+      line-height: $font-line-height-md;
+    }
+  }
+
+  .price {
+    width: 146px;
+    text-align: right;
+    font-size: $font-size-base;
+    font-weight: $font-weight-bold;
+    color: $orange;
+  }
+}

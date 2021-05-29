@@ -1,6 +1,7 @@
 import React from 'react';
 import Basket from '../../components/Basket/Basket';
 import RestaurantBanner from '../../components/RestaurantBanner/RestaurantBanner';
+import MenuList from '../../components/MenuList/MenuList';
 import './RestaurantDetail.scss';
 
 export const dummyRestaurantBannerData = {
@@ -19,12 +20,68 @@ export const dummyRestaurantBannerData = {
   isSuperRestaurant: true,
 };
 
+export const dummyMenuList = [
+  {
+    title: 'Burgerler',
+    menus: [
+      {
+        menuName: 'Classic American Cheeseburger',
+        description: 'Griddle smashed köfte, cheddar peyniri, marul, domates, soğan küpleri (Burger köfteleri, orta pişmiş olarak servis edilmektedir.)',
+        price: 1750,
+      },
+      {
+        menuName: 'Double Cheeseburger',
+        description: 'Griddle smashed köfte, cheddar peyniri, marul, domates, soğan küpleri (Burger köfteleri, orta pişmiş olarak servis edilmektedir.)',
+        price: 1250,
+      },
+      {
+        menuName: 'Hamburger Menü',
+        description: 'Griddle smashed köfte, cheddar peyniri, marul, domates, soğan küpleri (Burger köfteleri, orta pişmiş olarak servis edilmektedir.)',
+        price: 2000,
+      },
+      {
+        menuName: 'Queens Burger',
+        description: 'Griddle smashed köfte, cheddar peyniri, marul, domates, soğan küpleri (Burger köfteleri, orta pişmiş olarak servis edilmektedir.)',
+        price: 1750,
+      },
+    ],
+  },
+  {
+    title: 'Burgerler',
+    menus: [
+      {
+        menuName: 'Classic American Cheeseburger',
+        description: 'Griddle smashed köfte, cheddar peyniri, marul, domates, soğan küpleri (Burger köfteleri, orta pişmiş olarak servis edilmektedir.)',
+        price: 1750,
+      },
+      {
+        menuName: 'Double Cheeseburger',
+        description: 'Griddle smashed köfte, cheddar peyniri, marul, domates, soğan küpleri (Burger köfteleri, orta pişmiş olarak servis edilmektedir.)',
+        price: 1250,
+      },
+      {
+        menuName: 'Hamburger Menü',
+        description: 'Griddle smashed köfte, cheddar peyniri, marul, domates, soğan küpleri (Burger köfteleri, orta pişmiş olarak servis edilmektedir.)',
+        price: 2000,
+      },
+      {
+        menuName: 'Queens Burger',
+        description: 'Griddle smashed köfte, cheddar peyniri, marul, domates, soğan küpleri (Burger köfteleri, orta pişmiş olarak servis edilmektedir.)',
+        price: 1750,
+      },
+    ],
+  },
+];
+
 const RestaurantDetail = () => (
   <section className="container restaurant-detail">
     <Basket />
-    <RestaurantBanner
-      data={dummyRestaurantBannerData}
-    />
+    <div className="main-content">
+      <RestaurantBanner
+        data={dummyRestaurantBannerData}
+      />
+      {dummyMenuList && dummyMenuList.map((menus, index) => <MenuList data={menus} key={index} />)}
+    </div>
   </section>
 );
 
