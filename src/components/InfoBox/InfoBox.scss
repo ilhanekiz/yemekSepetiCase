@@ -1,0 +1,32 @@
+@import '../../assets/styles/variables';
+
+.info-box {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $green-light;
+  width: 41px;
+  height: 46px;
+  border-radius: 2px;
+  margin-left: 5px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  > .title,
+  > .point {
+    color: #fff;
+  }
+
+  > .title {
+    font-size: $font-size-md;
+    font-weight: $font-weight-medium;
+  }
+
+  > .point {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+  }
+}

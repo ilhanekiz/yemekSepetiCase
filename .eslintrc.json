@@ -35,6 +35,13 @@
       "react-hooks"
   ],
   "rules": {
+    "react/destructuring-assignment": [
+        "error",
+        "always",
+        {
+          "ignoreClassFields": true
+        }
+      ],
       "react/react-in-jsx-scope": "off",
       "react/jsx-filename-extension": [
           1,
