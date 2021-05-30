@@ -7,10 +7,10 @@ import Count from '../Count/Count';
 const handlePrice = (value) => (value / 100).toFixed(2).replace('.', ',');
 
 const Menu = (props) => {
-  const { menuName, description, price } = props.data;
+  const { id, menuName, description, price } = props.data;
 
   const onSubmit = (number) => {
-    props.onSubmit(number, menuName, description, price);
+    props.onSubmit(number, menuName, description, price, id);
   };
 
   return (
@@ -31,6 +31,7 @@ Menu.propTypes = {
   menuName: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
+  id: PropTypes.number.isRequired,
   onSubmit: PropTypes.func.isRequired,
 };
 

@@ -6,14 +6,14 @@ import Menu from '../Menu/Menu';
 const MenuList = (props) => {
   const { title, menus } = props.data;
 
-  const onSubmit = (number, menuName, description, price) => {
-    props.onSubmit(number, menuName, description, price);
+  const onSubmit = (number, menuName, description, price, id) => {
+    props.onSubmit(number, menuName, description, price, id);
   };
 
   return (
     <div className="menu-list">
       <h2 className="head">{title}</h2>
-      {menus && menus.map((menu, index) => <Menu data={menu} key={index} onSubmit={onSubmit} />)}
+      {menus && menus.map((menu) => <Menu data={menu} key={menu.id} onSubmit={onSubmit} />)}
     </div>
   );
 };

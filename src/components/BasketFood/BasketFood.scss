@@ -4,27 +4,28 @@
   display: flex;
   align-items: center;
   border-bottom: 1px solid $gray;
-  padding: 0 9px;
+  padding: 9px;
 
   &:last-child {
     border-bottom: none;
   }
 
   .menu-titles {
-    // padding-right: 5px;
     width: 144px;
   
     .head {
+      display: block;
       font-size: 9px;
       font-weight: 700;
       color: #FF6508;
-      line-height: 15px;
+      line-height: 14px;
     }
 
     .desc {
       font-size: 9px;
       font-weight: 400;
       line-height: 13px;
+      padding-bottom: 0;
     }
   }
 

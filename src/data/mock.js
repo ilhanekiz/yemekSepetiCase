@@ -16,7 +16,7 @@ exports.MockRestaurantBannerData = {
 
 exports.MockMenuList = [
   {
-    id: 1,
+    productListId: 1,
     title: 'Burgerler',
     menus: [
       {
@@ -41,37 +41,37 @@ exports.MockMenuList = [
         id: 4,
         menuName: 'Queens Burger',
         description: 'Griddle smashed köfte, cheddar peyniri, marul, domates, soğan küpleri (Burger köfteleri, orta pişmiş olarak servis edilmektedir.)',
-        price: 1750,
+        price: 2500,
       },
     ],
   },
   {
-    id: 2,
+    productListId: 2,
     title: 'Burgerler',
     menus: [
       {
-        id: 1,
-        menuName: 'Classic American Cheeseburger',
+        id: 5,
+        menuName: 'Classic American Cheeseburger v2',
         description: 'Griddle smashed köfte, cheddar peyniri, marul, domates, soğan küpleri (Burger köfteleri, orta pişmiş olarak servis edilmektedir.)',
         price: 1750,
       },
       {
-        id: 2,
-        menuName: 'Double Cheeseburger',
+        id: 6,
+        menuName: 'Double Cheeseburger v2',
         description: 'Griddle smashed köfte, cheddar peyniri, marul, domates, soğan küpleri (Burger köfteleri, orta pişmiş olarak servis edilmektedir.)',
         price: 1250,
       },
       {
-        id: 3,
-        menuName: 'Hamburger Menü',
+        id: 7,
+        menuName: 'Hamburger Menü v2',
         description: 'Griddle smashed köfte, cheddar peyniri, marul, domates, soğan küpleri (Burger köfteleri, orta pişmiş olarak servis edilmektedir.)',
         price: 2000,
       },
       {
-        id: 4,
-        menuName: 'Queens Burger',
+        id: 8,
+        menuName: 'Queens Burger v2',
         description: 'Griddle smashed köfte, cheddar peyniri, marul, domates, soğan küpleri (Burger köfteleri, orta pişmiş olarak servis edilmektedir.)',
-        price: 1750,
+        price: 3550,
       },
     ],
   },
