@@ -1,17 +1,23 @@
 import React, { useState } from 'react';
 import './Count.scss';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
-const Count = () => {
+const Count = (props) => {
   const [val, setVal] = useState(1);
 
-  const onChangeHandler = (event) => {
-    setVal(event.target.value);
+  const onChangeHandler = (e) => {
+    const re = /^[0-9\b]+$/;
+    if (e.target.value === '') {
+      setVal('');
+    } else if (re.test(e.target.value)) {
+      setVal(parseInt(e.target.value, 10));
+    }
   };
 
-  function onSubmit() {
-    console.log(val);
-  }
+  const onSubmit = () => {
+    props.onSubmit(val === '' ? 1 : val);
+    setVal(1);
+  };
 
   return (
     <div className="count">
@@ -21,7 +27,9 @@ const Count = () => {
   );
 };
 
-Count.propTypes = {};
+Count.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
 
 Count.defaultProps = {};
 

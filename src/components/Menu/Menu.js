@@ -8,9 +8,14 @@ const handlePrice = (value) => (value / 100).toFixed(2).replace('.', ',');
 
 const Menu = (props) => {
   const { menuName, description, price } = props.data;
+
+  const onSubmit = (number) => {
+    props.onSubmit(number, menuName, description, price);
+  };
+
   return (
     <div className="menu">
-      <Count />
+      <Count onSubmit={(number) => onSubmit(number)} />
       <div className="text-content">
         <span className="title">{menuName}</span>
         <span className="description">{description}</span>
@@ -26,6 +31,7 @@ Menu.propTypes = {
   menuName: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
+  onSubmit: PropTypes.func.isRequired,
 };
 
 Menu.defaultProps = {};

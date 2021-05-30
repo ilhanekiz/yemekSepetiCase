@@ -73,16 +73,29 @@ export const dummyMenuList = [
   },
 ];
 
-const RestaurantDetail = () => (
-  <section className="container restaurant-detail">
-    <Basket />
-    <div className="main-content">
-      <RestaurantBanner
-        data={dummyRestaurantBannerData}
-      />
-      {dummyMenuList && dummyMenuList.map((menus, index) => <MenuList data={menus} key={index} />)}
-    </div>
-  </section>
-);
+const RestaurantDetail = () => {
+  const onSubmit = (number, menuName, description, price) => {
+    console.log('detail');
+    console.log(number, menuName, description, price);
+  };
+
+  return (
+    <section className="container restaurant-detail">
+      <Basket />
+      <div className="main-content">
+        <RestaurantBanner
+          data={dummyRestaurantBannerData}
+        />
+        {dummyMenuList && dummyMenuList.map((menus, index) => (
+          <MenuList
+            data={menus}
+            key={index}
+            onSubmit={onSubmit}
+          />
+        ))}
+      </div>
+    </section>
+  );
+};
 
 export default RestaurantDetail;
