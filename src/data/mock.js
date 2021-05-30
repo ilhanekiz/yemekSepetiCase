@@ -3,13 +3,17 @@ exports.MockRestaurantBannerData = {
   logo: 'src/assets/images/restaurant-logo.png',
   title: 'X-Force Burger & Pizza, Arnavutköy İlçesi(Mustafa Kemal Paşa Mah.)',
   infoData: [
-    { title: 'Hız', point: '8,7' },
-    { title: 'Servis', point: '8,7' },
-    { title: 'Lezzet', point: '8,7' },
+    { id: 0, title: 'Hız', point: '8,7' },
+    { id: 1, title: 'Servis', point: '8,7' },
+    { id: 2, title: 'Lezzet', point: '8,7' },
   ],
   delivery: [
-    { icon: 'src/assets/images/icons/min-price.png', title: 'Min. Tutar', subTitle: '50,00 TL' },
-    { icon: 'src/assets/images/icons/motor.png', title: 'Servis Süresi', subTitle: '20-30 dk' },
+    {
+      id: 0, icon: 'src/assets/images/icons/min-price.png', title: 'Min. Tutar', subTitle: '50,00 TL',
+    },
+    {
+      id: 1, icon: 'src/assets/images/icons/motor.png', title: 'Servis Süresi', subTitle: '20-30 dk',
+    },
   ],
   isSuperRestaurant: true,
 };

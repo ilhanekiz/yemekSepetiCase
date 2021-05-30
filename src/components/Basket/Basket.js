@@ -15,6 +15,10 @@ const Basket = (props) => {
     return `${(totalPrice / 100).toFixed(2).replace('.', ',')} TL`;
   };
 
+  const onChange = (val, id, price) => {
+    props.onChange(val, id, price);
+  };
+
   return (
     <div id="basket">
       <div className="head">
@@ -32,7 +36,7 @@ const Basket = (props) => {
         {isBasketMode && (
           <div className="active-mode">
             <div className="food-list">
-              {data && data.map((food) => <BasketFood data={food} />)}
+              {data.map((food) => <BasketFood data={food} onChange={onChange} key={food.id} />)}
             </div>
             <div className="total-amount">
               <span>Toplam</span>
@@ -46,7 +50,8 @@ const Basket = (props) => {
 };
 
 Basket.propTypes = {
-  data: PropTypes.array.isRequired,
+  data: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 Basket.defaultProps = {};

@@ -9,8 +9,14 @@ import { MockRestaurantBannerData, MockMenuList } from '../../data/mock';
 const RestaurantDetail = () => {
   const [basket, setBasket] = useState([]);
 
-  const onSubmit = (number, menuName, description, price, id) => {
-    handleBasket(number, menuName, description, price, id);
+  const onChange = (val, id, price) => {
+    const currentBasket = [...basket];
+    const matchingProduct = currentBasket.find((food) => food.id === id);
+    matchingProduct.number = val;
+    matchingProduct.price = val * price;
+    const manipuleBasket = currentBasket.filter((food) => food.id !== id);
+    manipuleBasket.push(matchingProduct);
+    setBasket(manipuleBasket);
   };
 
   const handleBasket = (paramsNumber, paramsMenuName, paramsDescription, paramsPrice, paramsId) => {
@@ -52,9 +58,13 @@ const RestaurantDetail = () => {
     }
   };
 
+  const onSubmit = (number, menuName, description, price, id) => {
+    handleBasket(number, menuName, description, price, id);
+  };
+
   return (
     <section className="container restaurant-detail">
-      <Basket data={basket} />
+      <Basket data={basket} onChange={onChange} />
       <div className="main-content">
         <RestaurantBanner
           data={MockRestaurantBannerData}

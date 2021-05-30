@@ -13,22 +13,22 @@
   
     .head {
       display: block;
-      font-size: 9px;
-      font-weight: 700;
+      font-size: $font-size-xsl;
+      font-weight: $font-weight-bold;
       color: #FF6508;
       line-height: 14px;
     }
 
     .desc {
-      font-size: 9px;
-      font-weight: 400;
+      font-size: $font-size-xsl;
+      font-weight: $font-weight-normal;
       line-height: 13px;
       padding-bottom: 0;
     }
   }
 
   .form-control {
-    font-size: 9px;
+    font-size: $font-size-xsl;
     color: #000;
     box-sizing: border-box;
     text-align: center;
@@ -42,7 +42,7 @@
   }
 
   .price {
-    font-size: 9px;
+    font-size: $font-size-xsl;
     color: #000;
     margin-right: 8px;
   }

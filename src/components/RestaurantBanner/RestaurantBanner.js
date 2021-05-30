@@ -21,10 +21,10 @@ const RestaurantBanner = (props) => {
             </div>
             )}
             <div className="info-boxes">
-              {infoData.map((info, index) => <InfoBox infoData={info} key={index} />)}
+              {infoData.map((info) => <InfoBox infoData={info} key={info.id} />)}
             </div>
             <div className="delivery">
-              {delivery.map((delivery, index) => <IconBox delivery={delivery} key={index} />)}
+              {delivery.map((icon) => <IconBox delivery={icon} key={icon.id} />)}
             </div>
           </div>
         </div>
@@ -38,8 +38,8 @@ RestaurantBanner.propTypes = {
   logo: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   isSuperRestaurant: PropTypes.bool.isRequired,
-  infoData: PropTypes.array.isRequired,
-  delivery: PropTypes.array.isRequired,
+  infoData: PropTypes.arrayOf(PropTypes.string).isRequired,
+  delivery: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 RestaurantBanner.defaultProps = {};
