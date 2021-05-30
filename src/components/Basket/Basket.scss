@@ -24,13 +24,13 @@
   }
 
   .content {
-    padding: 20px;
     border-bottom: 1px solid $gray;
     border-left: 1px solid $gray;
     border-right: 1px solid $gray;
     border-radius: 0 0 5px 5px;
 
     .passive-mode {
+      padding: 20px;
       display: flex;
       align-items: center;
 
@@ -39,6 +39,18 @@
         font-weight: $font-weight-bold;
         color: #000;
         padding-left: 10px;
+      }
+    }
+
+    .active-mode {
+      .total-amount {
+        padding: 0 9px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        line-height: 30px;
+        font-size: 11px;
+        font-weight: 700;
       }
     }
   }
