@@ -6,12 +6,10 @@
   border-bottom: 1px solid $gray;
   padding: 9px;
 
-  &:last-child {
-    border-bottom: none;
-  }
-
   .menu-titles {
     width: 144px;
+    padding-right: 5px;
+    box-sizing: border-box;
   
     .head {
       display: block;

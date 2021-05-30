@@ -12,7 +12,7 @@ const BasketFood = (props) => {
         <span className="head">{menuName}</span>
         <p className="desc">{description}</p>
       </div>
-      <input className="form-control" type="text" />
+      <input className="form-control" type="text" value={number} />
       <div className="price">{`${handlePrice(price)} TL`}</div>
       <i className="delete-icon">x</i>
     </div>

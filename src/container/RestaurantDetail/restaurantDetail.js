@@ -13,12 +13,43 @@ const RestaurantDetail = () => {
     handleBasket(number, menuName, description, price, id);
   };
 
-  const handleBasket = (number, menuName, description, price, id) => {
+  const handleBasket = (paramsNumber, paramsMenuName, paramsDescription, paramsPrice, paramsId) => {
     const currentBasket = [...basket];
-    currentBasket.push({
-      number, menuName, description, price, id,
-    });
-    setBasket(currentBasket);
+
+    if (currentBasket.length === 0) {
+      // Sepet boş ise direk gelen ürün ile setleyelim.
+      currentBasket.push({
+        number: paramsNumber,
+        menuName: paramsMenuName,
+        description: paramsDescription,
+        price: paramsNumber * paramsPrice,
+        id: paramsId,
+      });
+      setBasket(currentBasket);
+      return;
+    }
+
+    // Sepette daha önceden aynı ürün var ise onu alıyorum.
+    const matchingProduct = currentBasket.find((food) => food.id === paramsId);
+
+    if (typeof matchingProduct === 'undefined') {
+      // Eğer eşleşen bir ürün yok ise
+      currentBasket.push({
+        number: paramsNumber,
+        menuName: paramsMenuName,
+        description: paramsDescription,
+        price: paramsNumber * paramsPrice,
+        id: paramsId,
+      });
+      setBasket(currentBasket);
+    } else {
+      // Eğer ürün eşleşmiş ise
+      matchingProduct.number += paramsNumber;
+      matchingProduct.price = matchingProduct.number * paramsPrice;
+      const manipuleBasket = currentBasket.filter((food) => food.id !== paramsId);
+      manipuleBasket.push(matchingProduct);
+      setBasket(manipuleBasket);
+    }
   };
 
   return (

@@ -31,8 +31,9 @@ const Basket = (props) => {
 
         {isBasketMode && (
           <div className="active-mode">
-            {data && data.map((food) => <BasketFood data={food} />)}
-
+            <div className="food-list">
+              {data && data.map((food) => <BasketFood data={food} />)}
+            </div>
             <div className="total-amount">
               <span>Toplam</span>
               <span>{handleTotalPrice(data)}</span>

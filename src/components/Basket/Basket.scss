@@ -43,6 +43,10 @@
     }
 
     .active-mode {
+      .food-list {
+        max-height: 300px;
+        overflow-y: scroll;
+      }
       .total-amount {
         padding: 0 9px;
         display: flex;
